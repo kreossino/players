@@ -1,4 +1,4 @@
-/*
+DROP TABLE IF EXISTS `e107_player`;
 CREATE TABLE `player` (
   `id` int(10) NOT NULL AUTO_INCREMENT,
   `icon` varchar(255) DEFAULT NULL,
@@ -8,18 +8,20 @@ CREATE TABLE `player` (
   `altezza` int(5) DEFAULT NULL,
   `nazionalita` varchar(100) DEFAULT NULL,
   `nick` varchar(255) DEFAULT NULL,
+  `squadra` varchar(100) DEFAULT NULL,
   `ruolo` varchar(100) DEFAULT NULL,
-  `numeromaglia` int(4) DEFAULT NULL,
+  `numeromaglia` int(4) unsigned DEFAULT NULL,
   `urlinstagram` varchar(255) DEFAULT NULL,
   `urlfacebook` varchar(255) DEFAULT NULL,
   `urltwitter` varchar(255) DEFAULT NULL,
   `societa` varchar(255) DEFAULT NULL,
   `annoingresso` int(4) DEFAULT NULL,
-  `note` text DEFAULT NULL,
+  `note` text,
   `active` int(1) unsigned NOT NULL DEFAULT '1',
   `incarico` varchar(20) DEFAULT NULL,
   `visibile` varchar(255) DEFAULT NULL,
+  `telefono` varchar(30) DEFAULT NULL,
+  `email` varchar(30) DEFAULT NULL,
+  `scadenzacertificato` date NOT NULL,
   PRIMARY KEY (`id`)
-) ENGINE=MyISAM AUTO_INCREMENT=1;
-
-*/
+) ENGINE=MyISAM AUTO_INCREMENT=11 DEFAULT CHARSET=utf8;

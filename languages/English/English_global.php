@@ -4,7 +4,7 @@
 // This should contain the LANs used in the plugin.xml file. 
 
 define("LAN_PLUGIN_PLAYERS_NAME", "Players");
-define("LAN_PLUGIN_PLAYERS_DIZ", "test plugin");
+define("LAN_PLUGIN_PLAYERS_DIZ", "plugin");
 define("LAN_PLUGIN_PLAYERS_LINK", "Collegamento vuoto");
-define("LAN_PLUGIN_VOLLEY_NAME", "Players SirVolley");
+define("LAN_PLUGIN_VOLLEY_NAME", "Players Volley");
 ?>

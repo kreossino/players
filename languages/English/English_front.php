@@ -1,12 +1,8 @@
 <?php
-/**
- * @file
- * Definition of Italian strings for area Frontend.
- */
-define('PLAYERS_TITLELAN_01', 'Ellera Volley');
+
 define('PLAYERSLAN_01', 'Nome e Cognome: ');
 define('PLAYERSLAN_02', 'Ruolo: ');
-define('PLAYERSLAN_03', 'Anno: ');
+define('PLAYERSLAN_03', 'Data di nascita: ');
 define('PLAYERSLAN_04', 'Altezza:-> ');
 define('PLAYERSLAN_05', 'Nazionalità: ');
 define('PLAYERSLAN_06', 'Numero Maglia: ');
@@ -19,4 +15,5 @@ define('PLAYERSLAN_12', 'note: ');
 define('PLAYERSLAN_13', 'nick: ');
 define('PLAYERSLAN_14', 'Squadra: ');
 define('PLAYERSLAN_15', 'Incarico: ');
+
 ?>
