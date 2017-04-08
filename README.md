@@ -1,2 +1,2 @@
 # players
-plugin for volleyball players
+plugin for volleyball Team players 

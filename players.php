@@ -94,7 +94,7 @@ $('#submit').on('click', function(){
 ";
 
 	$sql = e107::getDb();
-	$sql->select('player', 'nomecognome,  foto, datanascita, squadra, incarico, ruolo, nick, numeromaglia,  urlinstagram, urlfacebook, urltwitter', 'active=1 ORDER BY squadra DESC');
+	$sql->select('player', 'nomecognome,  foto, datanascita, squadra, incarico, ruolo, nick, numeromaglia, note,  urlinstagram, urlfacebook, urltwitter', 'active=1 ORDER BY squadra DESC');
 
 while($row = $sql->fetch())
 {
@@ -106,7 +106,6 @@ while($row = $sql->fetch())
 	if ($row['numeromaglia'] == 0) {
 		$row['numeromaglia'] = '';
 	}
-
 	$birthdate = '';
 	if ($row['datanascita'] != 0) {
 		$birthdate = PLAYERSLAN_03.$tp->toDate($row['datanascita'], "yyyy");
@@ -120,6 +119,7 @@ while($row = $sql->fetch())
 <div class='col-xs-12 col-sm-8 center'><h3>".$row['squadra']."<br><div class='padtop1'>".$row['ruolo']."<br>".$row['nomecognome']."</h3>
 <!-- //<div class='col-xs-12 col-sm-4'>".PLAYERSLAN_04.$row['altezza']."</div>  -->
 <br><div class='left'><h3>".$birthdate."</h3></div>
+<br><div class='col-xs-12'>$tp->toHtml".$row['note']."</div>
 <div class='col-xs-12 right fa-3x'>
 ".$row['incarico']."
 <i class='fa fa-facebook-square' aria-hidden='true'>".$row['urlfacebook']."</i>

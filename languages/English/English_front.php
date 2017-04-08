@@ -2,7 +2,7 @@
 
 define('PLAYERSLAN_01', 'Nome e Cognome: ');
 define('PLAYERSLAN_02', 'Ruolo: ');
-define('PLAYERSLAN_03', 'Data di nascita: ');
+define('PLAYERSLAN_03', 'Anno: ');
 define('PLAYERSLAN_04', 'Altezza:-> ');
 define('PLAYERSLAN_05', 'Nazionalità: ');
 define('PLAYERSLAN_06', 'Numero Maglia: ');
