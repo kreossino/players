@@ -6,7 +6,7 @@ CREATE TABLE `player` (
   `nomecognome` varchar(100) NOT NULL,
   `datanascita` int(10) DEFAULT NULL,
   `altezza` int(5) DEFAULT NULL,
-  `nazionalita` varchar(100) DEFAULT NULL,
+  `nazionalita` char(2) DEFAULT NULL,
   `nick` varchar(255) DEFAULT NULL,
   `squadra` varchar(100) DEFAULT NULL,
   `ruolo` varchar(100) DEFAULT NULL,
@@ -24,4 +24,4 @@ CREATE TABLE `player` (
   `email` varchar(30) DEFAULT NULL,
   `scadenzacertificato` date NOT NULL,
   PRIMARY KEY (`id`)
-) ENGINE=MyISAM AUTO_INCREMENT=11 DEFAULT CHARSET=utf8;
+) ENGINE=MyISAM DEFAULT CHARSET=utf8;
