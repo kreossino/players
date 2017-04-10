@@ -69,7 +69,7 @@ class player_ui extends e_admin_ui
 
 		protected $fields 		= array (  'checkboxes' =>   array ( 'title' => '', 'type' => null, 'data' => null, 'width' => '5%', 'thclass' => 'center', 'forced' => '1', 'class' => 'center', 'toggle' => 'e-multiselect',  ),
 		  'id' =>   array ( 'title' => LAN_ID, 'data' => 'int', 'width' => '5%', 'batch' => true, 'help' => '', 'readParms' => '', 'writeParms' => '', 'class' => 'left', 'thclass' => 'left',  ),
-		  'foto' =>   array ( 'title' => 'Foto', 'type' => 'image', 'data' => 'str', 'width' => 'auto', 'inline' => true, 'help' => '', 'readParms' => 'thumb=80x80', 'writeParms' => '', 'class' => 'left', 'thclass' => 'left',  ),
+		  'foto' =>   array ( 'title' => 'Foto', 'type' => 'image', 'data' => 'str', 'width' => 'auto', 'inline' => true, 'help' => '', 'readParms' => 'thumb=80x80', 'writeParms' => 'media=players_image', 'class' => 'left', 'thclass' => 'left',  ),
 		  'nomecognome' =>   array ( 'title' => 'Nome Cognome', 'type' => 'text', 'data' => 'str', 'width' => 'auto', 'inline' => true, 'help' => '', 'readParms' => '', 'writeParms' => '', 'class' => 'left', 'thclass' => 'left',  ),
 		  'datanascita' =>   array ( 'title' => 'Datanascita', 'type' => 'datestamp', 'data' => 'int', 'width' => 'auto', 'help' => '', 'readParms' => '', 'writeParms' => '', 'class' => 'left', 'thclass' => 'left',  ),
 		  'altezza' =>   array ( 'title' => 'Altezza', 'type' => 'number', 'data' => 'int', 'width' => 'auto', 'help' => '', 'readParms' => '', 'writeParms' => '', 'class' => 'left', 'thclass' => 'left',  ),
@@ -83,7 +83,7 @@ class player_ui extends e_admin_ui
 		  'urlfacebook' =>   array ( 'title' => 'Urlfacebook', 'type' => 'url', 'data' => 'str', 'width' => 'auto', 'batch' => true, 'help' => '', 'readParms' => '', 'writeParms' => '', 'class' => 'left', 'thclass' => 'left',  ),
 		  'urltwitter' =>   array ( 'title' => 'Urltwitter', 'type' => 'url', 'data' => 'str', 'width' => 'auto', 'batch' => true, 'help' => '', 'readParms' => '', 'writeParms' => '', 'class' => 'left', 'thclass' => 'left',  ),
 		  'societa' =>   array ( 'title' => 'Societa', 'type' => 'text', 'data' => 'str', 'width' => 'auto', 'filter' => true, 'inline' => true, 'help' => '', 'readParms' => '', 'writeParms' => '', 'class' => 'left', 'thclass' => 'left',  ),
-		  'nazionalita' =>   array ( 'title' => 'Nazionalita', 'type' => 'text', 'data' => 'str', 'width' => 'auto', 'filter' => true,'inline' => true, 'help' => '', 'readParms' => '', 'writeParms' => '', 'class' => 'left', 'thclass' => 'left',  ),
+		  'nazionalita' =>   array ( 'title' => 'Nazionalita', 'type' => 'country', 'data' => 'str', 'width' => 'auto', 'filter' => true,'inline' => true, 'help' => '', 'readParms' => '', 'writeParms' => '', 'class' => 'left', 'thclass' => 'left',  ),
 		  'annoingresso' =>   array ( 'title' => 'Annoingresso', 'type' => 'number', 'data' => 'int', 'width' => 'auto', 'help' => '', 'readParms' => '', 'writeParms' => '', 'class' => 'left', 'thclass' => 'left',  ),
 		  'scadenzacertificato' =>   array ( 'title' => 'ScadenzaCertificato', 'type' => 'datestamp', 'data' => 'int', 'width' => 'auto', 'help' => '', 'readParms' => '', 'writeParms' => '', 'class' => 'left', 'thclass' => 'left',  ),
 		  'note' =>   array ( 'title' => 'Note', 'type' => 'bbarea', 'data' => 'str', 'width' => 'auto', 'help' => '', 'readParms' => '', 'writeParms' => '', 'class' => 'left', 'thclass' => 'left',  ),
@@ -92,8 +92,9 @@ class player_ui extends e_admin_ui
 		  'visibile' =>   array ( 'title' => 'Visibile', 'type' => 'userclass', 'data' => 'str', 'width' => 'auto', 'inline' => true, 'help' => '', 'readParms' => '', 'writeParms' => '', 'class' => 'left', 'thclass' => 'left',  ),
 		  'options' =>   array ( 'title' => LAN_OPTIONS, 'type' => null, 'data' => null, 'width' => '10%', 'thclass' => 'center last', 'class' => 'center last', 'forced' => '1',  ),
 		);		
-		
-		protected $fieldpref = array('id',  'foto', 'nomecognome', 'datanascita', 'altezza', 'nazionalita', 'nick', 'squadra', 'ruolo', 'numeromaglia', 'telefono', 'email', 'urlinstagram', 'urlfacebook', 'urltwitter', 'societa', 'annoingresso', 'scadenzacertificato', 'note', 'active', 'incarico', 'visibile');
+
+
+		protected $fieldpref = array('id',  'foto', 'nomecognome', 'datanascita', 'altezza', 'nazionalita', 'nick', 'squadra', 'ruolo', 'numeromaglia',  'societa', 'annoingresso', 'scadenzacertificato', 'active', 'incarico', 'visibile');
 		
 
 	//	protected $preftabs        = array('General', 'Other' );
