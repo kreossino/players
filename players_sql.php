@@ -1,3 +1,4 @@
+<?php exit; ?>
 DROP TABLE IF EXISTS `e107_player`;
 CREATE TABLE `player` (
   `id` int(10) NOT NULL AUTO_INCREMENT,

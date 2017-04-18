@@ -12,7 +12,7 @@ if(!e107::isInstalled('players'))
 }
 
 e107::lan('players', false, true); 					// load language file ie. e107_plugins/players/languages/English.php
-
+//e107::lan('players',true);
 
 require_once(HEADERF); 					// render the header (everything before the main content area)
 
@@ -50,8 +50,8 @@ class players_front
 
 		$text .= $this->renderList();
 
-		$ns->tablerender("Players", $text);
-
+//		$ns->tablerender("IL TEAM", $text); //insert  caption title
+		$ns->tablerender(PLAYERS_TITLELAN_01, $text);
 	}
 
 	/**
