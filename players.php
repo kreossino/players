@@ -119,7 +119,7 @@ class players_front
 		$sql = e107::getDb();
 		$tp = e107::getParser();
 
-		$sql->select('player', 'nomecognome,  foto, datanascita, squadra, incarico, ruolo, nick, numeromaglia, note,  urlinstagram, urlfacebook, urltwitter', 'active=1 ORDER BY squadra DESC');
+		$sql->select('player', 'nomecognome,  foto, datanascita, squadra, incarico, ruolo, nick, numeromaglia, note,  urlinstagram, urlfacebook, urltwitter', 'active=1 ORDER BY squadra DESC, numeromaglia ASC');
 
 		$text = '';
 
@@ -145,17 +145,20 @@ class players_front
 		$text .= "
 		<div class='row bordotabella' data-role='".$row['squadra']."' data-name='".$row['nomecognome']."'>
 
-			<div class='col-xs-12 col-sm-4 shadowfoto3 center'><a class='gallery-thumb img-responsive' href='".$tp->thumbUrl($row['foto'])."' data-gal='prettyPhoto[pp_gal]'>".$image."</a><br><h3>".$row['numeromaglia']."<br>".$row['nick']."</h3></div>
+			<div class='col-xs-12 col-sm-4 shadowfoto3 center'><a class='gallery-thumb img-responsive' href='".$tp->thumbUrl($row['foto'])."' data-gal='prettyPhoto[pp_gal]'>".$image."</a><br><h3>".$row['numeromaglia']."<br>".$row['nick']."<br>".$row['nomecognome']."<br>".$row['ruolo']."</h3></div>
 
-			<div class='col-xs-12 col-sm-8 center'><h3>".$row['squadra']."<br><div class='padtop1'>".$row['ruolo']."<br>".$row['nomecognome']."</h3>
+			<div class='col-xs-12 col-sm-8'><h3>".$row['squadra']."
+<!-- <br><div class='padtop1'>".$row['ruolo']."<br>".$row['nomecognome']." -->
+</h3>
 			<!-- //<div class='col-xs-12 col-sm-4'>".PLAYERSLAN_04.$row['altezza']."</div>  -->
 			<br><div class='left'><h3>".$birthdate."</h3></div>
 			<br><div class='col-xs-12'>".$tp->toHtml($row['note'],true)."</div>
 			<div class='col-xs-12 right fa-3x'>
 			".$row['incarico']."
-			<i class='fa fa-facebook-square' aria-hidden='true'>".$row['urlfacebook']."</i>
-			<i class='fa fa-twitter-square' aria-hidden='true'>".$row['urltwitter']."</i>
-			<i class='fa fa-instagram' aria-hidden='true'>".$row['urlinstagram']."</i></div>
+			<a href='".$row['urlfacebook']."'><i class='fa fa-facebook-square' aria-hidden='true'></i></a>
+			<a href='".$row['urltwitter']."'><i class='fa fa-twitter-square' aria-hidden='true'></i></a>
+			<a href='".$row['urlinstagram']."'><i class='fa fa-instagram' aria-hidden='true'></i></a>
+			</div>
 			</div>
 		</div>
 		";
