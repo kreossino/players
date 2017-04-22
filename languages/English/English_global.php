@@ -5,6 +5,6 @@
 
 define("LAN_PLUGIN_PLAYERS_NAME", "Players");
 define("LAN_PLUGIN_PLAYERS_DIZ", "plugin");
-define("LAN_PLUGIN_PLAYERS_LINK", "Collegamento vuoto");
+define("LAN_PLUGIN_PLAYERS_LINK", "Empty link");
 define("LAN_PLUGIN_VOLLEY_NAME", "Players Volley");
 ?>
