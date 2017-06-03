@@ -1,19 +1,20 @@
 <?xml version="1.0" encoding="utf-8"?>
-<e107Plugin name="Volleyball Team" lan="LAN_PLUGIN_VOLLEY_NAME" version="1.0" date="2016-04-14" compatibility="2.0" installRequired="true" >
+<e107Plugin name="Volleyball Team" lan="LAN_PLUGIN_VOLLEY_NAME" version="1.1" date="2016-04-14" compatibility="2.0" installRequired="true" >
 	<author name="kreos" url="www.serverkreos.com" />
 	<summary lan="">Volleyball team</summary>
-	<description lan="">volleyball team and staff</description>
+	<description lan="">Volleyball team and staff</description>
 	<keywords>
-		<word>volleyteam</word>
+		<word>sport</word>
+		<word>team</word>
 		<word>volleyball</word>
 	</keywords>
-	<category>misc</category>
+	<category>content</category>
 	<copyright></copyright>
 	<siteLinks>
 		<link url="{e_PLUGIN}players/players.php" sef='index' description="Players" perm='everyone' icon="" >LAN_PLUGIN_PLAYERS_NAME</link>
 	</siteLinks>
 	<adminLinks>
-		<link url="admin_config.php" description="" icon="" iconSmall="" icon128="" primary="true" >PLAYERS</link>
+  		<link url="admin_config.php" description="" icon="images/_icon_32.png" iconSmall="images/_icon_16.png" icon128="images/_icon_128.png" primary="true" >PLAYERS</link>		
 	</adminLinks>
 	<mediaCategories>
 		<category type="image">Player Images</category>
