@@ -9,7 +9,7 @@ if (!getperms('P'))
 	exit;
 }
 
-// e107::lan('players',true);
+e107::lan(e_CURRENT_PLUGIN,true, true);
 
 
 class players_adminArea extends e_admin_dispatcher
@@ -51,7 +51,7 @@ class player_ui extends e_admin_ui
 {
 			
 		protected $pluginTitle		= 'Volleyball Team';
-		protected $pluginName		= 'players';
+		protected $pluginName		= e_CURRENT_PLUGIN;
 		protected $eventName		= 'players-player'; // remove comment to enable event triggers in admin. 		
 		protected $table			= 'player';
 		protected $pid				= 'id';
@@ -69,27 +69,27 @@ class player_ui extends e_admin_ui
 
 		protected $fields 		= array (  'checkboxes' =>   array ( 'title' => '', 'type' => null, 'data' => null, 'width' => '5%', 'thclass' => 'center', 'forced' => '1', 'class' => 'center', 'toggle' => 'e-multiselect',  ),
 		  'id' =>   array ( 'title' => LAN_ID, 'data' => 'int', 'width' => '5%', 'batch' => true, 'help' => '', 'readParms' => '', 'writeParms' => '', 'class' => 'left', 'thclass' => 'left',  ),
-		  'foto' =>   array ( 'title' => 'Foto', 'type' => 'image', 'data' => 'str', 'width' => 'auto', 'inline' => true, 'help' => '', 'readParms' => 'thumb=80x80', 'writeParms' => 'media=players_image', 'class' => 'left', 'thclass' => 'left',  ),
-		  'nomecognome' =>   array ( 'title' => 'Nome Cognome', 'type' => 'text', 'data' => 'str', 'width' => 'auto', 'inline' => true, 'help' => '', 'readParms' => '', 'writeParms' => '', 'class' => 'left', 'thclass' => 'left',  ),
-		  'datanascita' =>   array ( 'title' => 'Datanascita', 'type' => 'datestamp', 'data' => 'int', 'width' => 'auto', 'help' => '', 'readParms' => '', 'writeParms' => '', 'class' => 'left', 'thclass' => 'left',  ),
-		  'altezza' =>   array ( 'title' => 'Altezza', 'type' => 'number', 'data' => 'int', 'width' => 'auto', 'help' => '', 'readParms' => '', 'writeParms' => '', 'class' => 'left', 'thclass' => 'left',  ),
-		  'telefono' =>   array ( 'title' => 'telefono', 'type' => 'text', 'data' => 'str', 'width' => 'auto', 'filter' => true,'inline' => true, 'help' => '', 'readParms' => '', 'writeParms' => '', 'class' => 'left', 'thclass' => 'left',  ),
-		  'email' =>   array ( 'title' => 'email', 'type' => 'text', 'data' => 'str', 'width' => 'auto', 'filter' => true,'inline' => true, 'help' => '', 'readParms' => '', 'writeParms' => '', 'class' => 'left', 'thclass' => 'left',  ),
-		  'nick' =>   array ( 'title' => 'Nick', 'type' => 'text', 'data' => 'str', 'width' => 'auto', 'help' => '', 'inline' => true, 'readParms' => '', 'writeParms' => '', 'class' => 'left', 'thclass' => 'left',  ),
-		  'squadra' =>   array ( 'title' => 'squadra', 'type' => 'dropdown', 'data' => 'str', 'width' => 'auto', 'filter' => true, 'inline' => true, 'help' => '', 'readParms' => '', 'writeParms' => '', 'class' => 'left', 'thclass' => 'left',  ),
-		  'ruolo' =>   array ( 'title' => 'Ruolo', 'type' => 'dropdown', 'data' => 'str', 'width' => 'auto', 'filter' => true, 'inline' => true, 'help' => '', 'readParms' => '', 'writeParms' => '', 'class' => 'left', 'thclass' => 'left',  ),
-		  'numeromaglia' =>   array ( 'title' => 'Numeromaglia', 'type' => 'number', 'data' => 'int', 'width' => 'auto', 'help' => '', 'readParms' => '', 'writeParms' => '', 'class' => 'left', 'thclass' => 'left',  ),
-		  'urlinstagram' =>   array ( 'title' => 'Urlinstagram', 'type' => 'url', 'data' => 'str', 'width' => 'auto', 'batch' => true, 'help' => '', 'readParms' => '', 'writeParms' => '', 'class' => 'left', 'thclass' => 'left',  ),
-		  'urlfacebook' =>   array ( 'title' => 'Urlfacebook', 'type' => 'url', 'data' => 'str', 'width' => 'auto', 'batch' => true, 'help' => '', 'readParms' => '', 'writeParms' => '', 'class' => 'left', 'thclass' => 'left',  ),
-		  'urltwitter' =>   array ( 'title' => 'Urltwitter', 'type' => 'url', 'data' => 'str', 'width' => 'auto', 'batch' => true, 'help' => '', 'readParms' => '', 'writeParms' => '', 'class' => 'left', 'thclass' => 'left',  ),
-		  'societa' =>   array ( 'title' => 'Societa', 'type' => 'text', 'data' => 'str', 'width' => 'auto', 'filter' => true, 'inline' => true, 'help' => '', 'readParms' => '', 'writeParms' => '', 'class' => 'left', 'thclass' => 'left',  ),
-		  'nazionalita' =>   array ( 'title' => 'Nazionalita', 'type' => 'country', 'data' => 'str', 'width' => 'auto', 'filter' => true,'inline' => true, 'help' => '', 'readParms' => '', 'writeParms' => '', 'class' => 'left', 'thclass' => 'left',  ),
-		  'annoingresso' =>   array ( 'title' => 'Annoingresso', 'type' => 'number', 'data' => 'int', 'width' => 'auto', 'help' => '', 'readParms' => '', 'writeParms' => '', 'class' => 'left', 'thclass' => 'left',  ),
-		  'scadenzacertificato' =>   array ( 'title' => 'ScadenzaCertificato', 'type' => 'datestamp', 'data' => 'int', 'width' => 'auto', 'help' => '', 'readParms' => '', 'writeParms' => '', 'class' => 'left', 'thclass' => 'left',  ),
-		  'note' =>   array ( 'title' => 'Note', 'type' => 'bbarea', 'data' => 'str', 'width' => 'auto', 'help' => '', 'readParms' => '', 'writeParms' => '', 'class' => 'left', 'thclass' => 'left',  ),
-		  'active' =>   array ( 'title' => 'Active', 'type' => 'boolean', 'data' => 'int', 'width' => 'auto', 'help' => '', 'readParms' => '', 'writeParms' => '', 'class' => 'left', 'thclass' => 'left',  ),
-		  'incarico' =>   array ( 'title' => 'Incarico', 'type' => 'dropdown', 'data' => 'str', 'width' => 'auto', 'inline' => true, 'help' => '', 'readParms' => '', 'writeParms' => '', 'class' => 'left', 'thclass' => 'left',  ),
-		  'visibile' =>   array ( 'title' => 'Visibile', 'type' => 'userclass', 'data' => 'str', 'width' => 'auto', 'inline' => true, 'help' => '', 'readParms' => '', 'writeParms' => '', 'class' => 'left', 'thclass' => 'left',  ),
+		  'foto' =>   array ( 'title' => PLAYER_PHOTO, 'type' => 'image', 'data' => 'str', 'width' => 'auto', 'inline' => true, 'help' => '', 'readParms' => 'thumb=80x80', 'writeParms' => 'media=players_image', 'class' => 'left', 'thclass' => 'left',  ),
+		  'nomecognome' =>   array ( 'title' => PLAYER_FULLNAME, 'type' => 'text', 'data' => 'str', 'width' => 'auto', 'inline' => true, 'help' => '', 'readParms' => '', 'writeParms' => '', 'class' => 'left', 'thclass' => 'left',  ),
+		  'datanascita' =>   array ( 'title' => PLAYER_BIRTHDAY, 'type' => 'datestamp', 'data' => 'int', 'width' => 'auto', 'help' => '', 'readParms' => '', 'writeParms' => '', 'class' => 'left', 'thclass' => 'left',  ),
+		  'altezza' =>   array ( 'title' => PLAYER_HEIGHT, 'type' => 'number', 'data' => 'int', 'width' => 'auto', 'help' => '', 'readParms' => '', 'writeParms' => '', 'class' => 'left', 'thclass' => 'left',  ),
+		  'telefono' =>   array ( 'title' => PLAYER_PHONE, 'type' => 'text', 'data' => 'str', 'width' => 'auto', 'filter' => true,'inline' => true, 'help' => '', 'readParms' => '', 'writeParms' => '', 'class' => 'left', 'thclass' => 'left',  ),
+		  'email' =>   array ( 'title' => PLAYER_EMAIL, 'type' => 'text', 'data' => 'str', 'width' => 'auto', 'filter' => true,'inline' => true, 'help' => '', 'readParms' => '', 'writeParms' => '', 'class' => 'left', 'thclass' => 'left',  ),
+		  'nick' =>   array ( 'title' => PLAYER_NICK, 'type' => 'text', 'data' => 'str', 'width' => 'auto', 'help' => '', 'inline' => true, 'readParms' => '', 'writeParms' => '', 'class' => 'left', 'thclass' => 'left',  ),
+		  'squadra' =>   array ( 'title' => PLAYER_TEAM, 'type' => 'dropdown', 'data' => 'str', 'width' => 'auto', 'filter' => true, 'inline' => true, 'help' => '', 'readParms' => '', 'writeParms' => '', 'class' => 'left', 'thclass' => 'left',  ),
+		  'ruolo' =>   array ( 'title' => PLAYER_ROLE, 'type' => 'dropdown', 'data' => 'str', 'width' => 'auto', 'filter' => true, 'inline' => true, 'help' => '', 'readParms' => '', 'writeParms' => '', 'class' => 'left', 'thclass' => 'left',  ),
+		  'numeromaglia' =>   array ( 'title' => PLAYER_DRESSNUMBER, 'type' => 'number', 'data' => 'int', 'width' => 'auto', 'help' => '', 'readParms' => '', 'writeParms' => '', 'class' => 'left', 'thclass' => 'left',  ),
+		  'urlinstagram' =>   array ( 'title' => PLAYER_INSTAGRAM, 'type' => 'url', 'data' => 'str', 'width' => 'auto', 'batch' => true, 'help' => '', 'readParms' => '', 'writeParms' => '', 'class' => 'left', 'thclass' => 'left',  ),
+		  'urlfacebook' =>   array ( 'title' => PLAYER_FACEBOOK, 'type' => 'url', 'data' => 'str', 'width' => 'auto', 'batch' => true, 'help' => '', 'readParms' => '', 'writeParms' => '', 'class' => 'left', 'thclass' => 'left',  ),
+		  'urltwitter' =>   array ( 'title' => PLAYER_TWITTER, 'type' => 'url', 'data' => 'str', 'width' => 'auto', 'batch' => true, 'help' => '', 'readParms' => '', 'writeParms' => '', 'class' => 'left', 'thclass' => 'left',  ),
+		  'societa' =>   array ( 'title' => PLAYER_SOCIETY, 'type' => 'text', 'data' => 'str', 'width' => 'auto', 'filter' => true, 'inline' => true, 'help' => '', 'readParms' => '', 'writeParms' => '', 'class' => 'left', 'thclass' => 'left',  ),
+		  'nazionalita' =>   array ( 'title' => PLAYER_NATIONALITY, 'type' => 'country', 'data' => 'str', 'width' => 'auto', 'filter' => true,'inline' => true, 'help' => '', 'readParms' => '', 'writeParms' => '', 'class' => 'left', 'thclass' => 'left',  ),
+		  'annoingresso' =>   array ( 'title' => PLAYER_ARRIVALYEAR, 'type' => 'number', 'data' => 'int', 'width' => 'auto', 'help' => '', 'readParms' => '', 'writeParms' => '', 'class' => 'left', 'thclass' => 'left',  ),
+		  'scadenzacertificato' =>   array ( 'title' => PLAYER_CERTIFICATE, 'type' => 'datestamp', 'data' => 'int', 'width' => 'auto', 'help' => '', 'readParms' => '', 'writeParms' => '', 'class' => 'left', 'thclass' => 'left',  ),
+		  'note' =>   array ( 'title' => LAN_DESCRIPTION, 'type' => 'bbarea', 'data' => 'str', 'width' => 'auto', 'help' => '', 'readParms' => '', 'writeParms' => '', 'class' => 'left', 'thclass' => 'left',  ),
+		  'active' =>   array ( 'title' => LAN_ACTIVE, 'type' => 'boolean', 'data' => 'int', 'width' => 'auto', 'help' => '', 'readParms' => '', 'writeParms' => '', 'class' => 'left', 'thclass' => 'left',  ),
+		  'incarico' =>   array ( 'title' => PLAYER_ASSIGNMENT, 'type' => 'dropdown', 'data' => 'str', 'width' => 'auto', 'inline' => true, 'help' => '', 'readParms' => '', 'writeParms' => '', 'class' => 'left', 'thclass' => 'left',  ),
+		  'visibile' =>   array ( 'title' => LAN_VISIBILITY, 'type' => 'userclass', 'data' => 'str', 'width' => 'auto', 'inline' => true, 'help' => '', 'readParms' => '', 'writeParms' => '', 'class' => 'left', 'thclass' => 'left',  ),
 		  'options' =>   array ( 'title' => LAN_OPTIONS, 'type' => null, 'data' => null, 'width' => '10%', 'thclass' => 'center last', 'class' => 'center last', 'forced' => '1',  ),
 		);		
 

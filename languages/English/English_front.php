@@ -5,7 +5,7 @@ define('PLAYERSLAN_02', 'Role: ');
 define('PLAYERSLAN_03', 'Year: ');
 define('PLAYERSLAN_04', 'Height:-> ');
 define('PLAYERSLAN_05', 'Nationality: ');
-define('PLAYERSLAN_06', 'T.Shirt Number: ');
+define('PLAYERSLAN_06', 'Dress Number: ');
 define('PLAYERSLAN_07', 'Instagram: ');
 define('PLAYERSLAN_08', 'Facebook: ');
 define('PLAYERSLAN_09', 'Twitter: ');
