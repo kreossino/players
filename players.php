@@ -20,7 +20,10 @@ e107::getParser()->setThumbSize(200,0);
 
 class players_front
 {
-	function __construct()
+	
+  public $player_role;
+  
+  function __construct()
 	{
 		e107::js('players','js/grayscale.js','jquery');	// Load Plugin javascript and include jQuery framework
 		//e107::css('players','css/my.css');		// load css file
@@ -28,11 +31,14 @@ class players_front
 
 		// place JS in here.
 		e107::js('footer-inline', "
-
-
-
 		");
 
+    /* to save database query */
+    /* TODO:  move this to shortcodes */
+    $players = e107::getDB()->retrieve('player_role', 'role_id,role_name', true, true);
+    foreach ($players AS $player) {
+        $this->player_role[$player['role_id']] = $player['role_name'];
+    }           
 	}
 
 
@@ -145,7 +151,7 @@ class players_front
 		$text .= "
 		<div class='row bordotabella' data-role='".$row['squadra']."' data-name='".$row['nomecognome']."'>
 
-			<div class='col-xs-12 col-sm-4 shadowfoto3 center'><a class='gallery-thumb img-responsive' href='".$tp->thumbUrl($row['foto'])."' data-gal='prettyPhoto[pp_gal]'>".$image."</a><br><h3>".$row['numeromaglia']."<br>".$row['nick']."<br>".$row['nomecognome']."<br>".$row['ruolo']."</h3></div>
+			<div class='col-xs-12 col-sm-4 shadowfoto3 center'><a class='gallery-thumb img-responsive' href='".$tp->thumbUrl($row['foto'])."' data-gal='prettyPhoto[pp_gal]'>".$image."</a><br><h3>".$row['numeromaglia']."<br>".$row['nick']."<br>".$row['nomecognome']."<br>".$this->player_role[$row['ruolo']]."</h3></div>
 
 			<div class='col-xs-12 col-sm-8'><h3>".$row['squadra']."
 <!-- <br><div class='padtop1'>".$row['ruolo']."<br>".$row['nomecognome']." -->
@@ -167,6 +173,7 @@ class players_front
 		return $text;
 
 	}
+   
 
 
 }

@@ -21,8 +21,14 @@ define('PLAYER_SOCIETY', 'Societa');
 define('PLAYER_NATIONALITY', 'Nazionalita');
 define('PLAYER_ARRIVALYEAR', 'Annoingresso');
 define('PLAYER_CERTIFICATE', 'ScadenzaCertificato'); 
-define('PLAYER_INCARICO', 'Incarico');
+define('PLAYER_ASSIGNMENT', 'Incarico');
 
- 
+define('PLAYER_ROLE_01', 'Manage roles');
+define('PLAYER_ROLE_02', 'Add role'); 
+define('PLAYER_ROLE_03', 'Role name'); 
+define('PLAYER_ROLE_04', 'Role desc'); 
+define('PLAYER_ROLE_05', 'Role type');
+define('PLAYER_ROLE_06', 'Player');
+define('PLAYER_ROLE_07', 'Staff'); 
 
 ?>

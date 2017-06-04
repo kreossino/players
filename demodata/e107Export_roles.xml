@@ -1,0 +1,101 @@
+<?xml version='1.0' encoding='utf-8' ?>
+<e107Export version="2.1.6 (git)" timestamp="1496557739" >
+	<database>
+	<dbTable name="player_role">
+		<item>
+			<field name="role_id">1</field>
+			<field name="role_name">Setter / Palleggiatore</field>
+			<field name="role_type">Player</field>
+			<field name="role_desc">The setter is the backbone of the offense and makes the decisions about who gets the ball when. She touches the ball on the second contact and delivers it to her hitters. She needs to be able to take in a lot of information at once and to make good decisions in a split second. Consistency here is key.</field>
+		</item>
+		<item>
+			<field name="role_id">2</field>
+			<field name="role_name">Outside hitter / Schiacciatore</field>
+			<field name="role_type">Player</field>
+			<field name="role_desc">An outside hitter is a great all-around player. Not only does the outside need great ball-handling skills, but he needs to be a solid hitter and blocker. </field>
+		</item>
+		<item>
+			<field name="role_id">3</field>
+			<field name="role_name">Opposite / Opposto</field>
+			<field name="role_type">Player</field>
+			<field name="role_desc"><![CDATA[The opposite plays opposite the setter on the right front and hits sets behind and in front of the setter.
+
+The opposite is responsible for blocking the opponent&#039;s outside hitter, which means the person who plays opposite needs to be a solid blocker as well as a good hitter. The opposite is also needed to pass and set, so should have great ball handling skills.]]></field>
+		</item>
+		<item>
+			<field name="role_id">4</field>
+			<field name="role_name">Middle blocker / Centrale</field>
+			<field name="role_type">Player</field>
+			<field name="role_desc"><![CDATA[A good middle can read the opponent&#039;s setter like a book and is quick enough to get from one end of the court to the other to block the ball.
+
+The middle also hits quick sets and keeps the other team&#039;s defense off balance. A great middle blocker is a major key to your team&#039;s defense.]]></field>
+		</item>
+		<item>
+			<field name="role_id">5</field>
+			<field name="role_name">Libero</field>
+			<field name="role_type">Player</field>
+			<field name="role_desc">The libero plays in the backrow and has impeccable ball control. The libero needs to be a great passer and an even better digger. She is all over the court to keep the ball in the air for her team to create scoring chances.</field>
+		</item>
+		<item>
+			<field name="role_id">6</field>
+			<field name="role_name">Coach</field>
+			<field name="role_type">Staff</field>
+			<field name="role_desc">Allenatore</field>
+		</item>
+		<item>
+			<field name="role_id">7</field>
+			<field name="role_name">2nd Coach</field>
+			<field name="role_type">Staff</field>
+			<field name="role_desc">2* Allenatore</field>
+		</item>
+		<item>
+			<field name="role_id">8</field>
+			<field name="role_name">Sports Director</field>
+			<field name="role_type">Staff</field>
+			<field name="role_desc">Direttore Sportivo</field>
+		</item>
+		<item>
+			<field name="role_id">9</field>
+			<field name="role_name">Technical director</field>
+			<field name="role_type">Staff</field>
+			<field name="role_desc">Direttore Tecnico</field>
+		</item>
+		<item>
+			<field name="role_id">10</field>
+			<field name="role_name">President</field>
+			<field name="role_type">Staff</field>
+			<field name="role_desc">Presidente</field>
+		</item>
+		<item>
+			<field name="role_id">11</field>
+			<field name="role_name">Vice president</field>
+			<field name="role_type">Staff</field>
+			<field name="role_desc">Vice Presidente</field>
+		</item>
+		<item>
+			<field name="role_id">12</field>
+			<field name="role_name">Athletic trainer</field>
+			<field name="role_type">Staff</field>
+			<field name="role_desc">Preparatore Atletico</field>
+		</item>
+		<item>
+			<field name="role_id">13</field>
+			<field name="role_name">Masseur</field>
+			<field name="role_type">Staff</field>
+			<field name="role_desc">Massaggiatore</field>
+		</item>
+		<item>
+			<field name="role_id">14</field>
+			<field name="role_name">Manager / Dirigente</field>
+			<field name="role_type">Staff</field>
+			<field name="role_desc"></field>
+		</item>
+		<item>
+			<field name="role_id">15</field>
+			<field name="role_name"></field>
+			<field name="role_type"></field>
+			<field name="role_desc"></field>
+		</item>
+	</dbTable>
+	</database>
+</e107Export>

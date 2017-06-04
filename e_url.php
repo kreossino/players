@@ -27,7 +27,7 @@ class players_url // plugin-folder + '_url'
 
 		$config['index'] = array(
 			'regex'			=> '^players/?$', 	// matched against url, and if true, redirected to 'redirect' below.
-			'alias'         => 'player',
+			'alias'         => 'players',
 			'sef'		=> '{alias}', 						// used by e107::url(); to create a url from the db table.
 			'redirect'		=> '{e_PLUGIN}players/players.php', 		// file-path of what to load when the regex returns true.
 
